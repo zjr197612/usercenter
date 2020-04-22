@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/user_center?serverTimezone=UTC
+    hikari:
+      username: root
+      password: 123
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848  #指定nacos Server的地址
+        #namespace: 9e904156-ae1a-4866-bafc-b2371356c990 #制定namespace,隔离的作用,区分开发/测试/生产
+        #cluster-name: NJ #虚拟划分, 例如按照区域划分为NJ,BJ
+        metadata: #元数据
+          instance: c
+          haha: hehe
+  application:
+    name: user-center #在nacos Server上的名字
+
+server:
+  port: 8081
