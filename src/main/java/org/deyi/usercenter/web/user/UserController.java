@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class UserController {
     private final UserService userService;
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     public User findByid(@PathVariable Integer id){
         log.info("被请求了...");
         return userService.findById(id);

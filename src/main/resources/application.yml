@@ -18,4 +18,4 @@ spring:
     name: user-center #在nacos Server上的名字
 
 server:
-  port: 8081
+  port: 8080
